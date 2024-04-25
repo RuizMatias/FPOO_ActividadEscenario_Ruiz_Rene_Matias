@@ -2,7 +2,7 @@ class Loro{
  private PVector posicion;
  private PImage imagen;
  private PVector velocidad;
- 
+ int direccion=1;
  public Loro(){
   imagen = loadImage("loro2.png");
  }
@@ -23,9 +23,9 @@ public void mover(){
   this.posicion.x+=this.velocidad.x;
   println(posicion.x);
   }else {
-   
-   this.posicion.x=0;
-  
+   if(this.posicion.x!=0){
+   this.posicion.x-=this.posicion.x-this.velocidad.x;
+   }
   
   }  
   
